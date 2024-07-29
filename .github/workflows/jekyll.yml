@@ -47,7 +47,7 @@ jobs:
 
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
-        run: bundle install"
+        run: bundle install
 
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
