@@ -10,7 +10,7 @@ pin: true
 media_subpath: '/posts/20250613'
 ---
 
-# Use case: Running the application behind a reverse proxy.
+# Use case: Running an application behind a reverse proxy.
 
 Let's imagine an application running on kubernetes with multiple replicas running simmultaniusly, as you might know, in kubernetes there is an ingress that redirect the traffic to the different replicas. You also might know, that if your kubernetes instance is running on a cloud provider ([Microsoft Azure](https://portal.azure.com/), [Amazon Web Services](https://aws.amazon.com/es/), [Google Cloud Platform](http://cloud.google.com/), etc), there might be a load balancer. In resume, the application is running behind a reverse proxy.
 
