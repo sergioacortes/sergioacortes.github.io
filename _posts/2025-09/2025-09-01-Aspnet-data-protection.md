@@ -14,7 +14,7 @@ media_subpath: '/posts/20250613'
 
 Let's imagine an application running on kubernetes with multiple replicas running simmultaniusly. 
 
-As you might know that if your kubernetes cluster is running on a cloud provider ([Microsoft Azure](https://portal.azure.com/), [Amazon Web Services](https://aws.amazon.com/es/), [Google Cloud Platform](http://cloud.google.com/), etc), there is a load balancer that redirect the traffic to the kubernetes ingress, in resume, the application is running behind a reverse proxy.
+As you might know that if your kubernetes cluster is running on a cloud provider ([Microsoft Azure](https://portal.azure.com/), [Amazon Web Services](https://aws.amazon.com/es/), [Google Cloud Platform](https://cloud.google.com/), etc), there is a load balancer that redirect the traffic to the kubernetes ingress, in resume, the application is running behind a reverse proxy.
 
 In the use case we are about to talk, the application runs behing a reverse proxy and start an authentication flow with the identity server (OpenIdConnect) and needs to save the state of the authentication flow once the identity server sends the response. The problem faced in this use case comes because the different replicas running in kubernetes are not sharing the state and here is when [Aspnet core data protection](https://learn.microsoft.com/en-us/aspnet/core/security/data-protection/introduction?view=aspnetcore-9.0) comes into play.
 
